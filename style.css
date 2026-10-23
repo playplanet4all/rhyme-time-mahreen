@@ -23,7 +23,7 @@
 html, body { margin: 0; height: 100%; }
 
 body {
-  font-family: "Fredoka", system-ui, -apple-system, sans-serif;
+  font-family: "Fredoka", "Noto Color Emoji", system-ui, -apple-system, sans-serif;
   color: var(--ink);
   background-color: var(--paper);
   background-image: radial-gradient(#d9d9d9 1.2px, transparent 1.2px);
@@ -60,7 +60,7 @@ body {
 
 .eyebrow { margin: 0 0 4px; font-size: 1.15rem; font-weight: 600; }
 .title { margin: 0 0 8px; font-size: clamp(2.4rem, 11vw, 3rem); line-height: 1; font-weight: 700; }
-.script { font-family: "Caveat", cursive; font-size: 1.25em; display: inline-block; transform: rotate(-4deg); border-bottom: 4px solid var(--ink); line-height: 0.9; }
+.script { font-family: "Caveat", "Noto Color Emoji", cursive; font-size: 1.25em; display: inline-block; transform: rotate(-4deg); border-bottom: 4px solid var(--ink); line-height: 0.9; }
 .mascots { font-size: 2.2rem; letter-spacing: 6px; margin: 10px 0 14px; }
 .intro__text { margin: 0 0 20px; font-size: 1.1rem; line-height: 1.5; color: var(--ink-soft); }
 .small { margin: 12px 0 0; font-size: 0.95rem; color: var(--ink-soft); }
@@ -136,11 +136,11 @@ body {
   animation: spinIn 0.9s var(--bounce) both;
 }
 @keyframes spinIn { from { transform: scale(0) rotate(-180deg); } to { transform: none; } }
-.reward__title { margin: 0 0 6px; font-family: "Caveat", cursive; font-size: clamp(2.2rem, 10vw, 2.8rem); line-height: 1.05; }
+.reward__title { margin: 0 0 6px; font-family: "Caveat", "Noto Color Emoji", cursive; font-size: clamp(2.2rem, 10vw, 2.8rem); line-height: 1.05; }
 .reward__stars { margin: 0 0 8px; font-size: 1.6rem; letter-spacing: 2px; line-height: 1.4; word-break: break-word; }
 .reward__msg { margin: 0 0 18px; font-size: 1.1rem; line-height: 1.5; color: var(--ink-soft); }
 .actions { display: grid; gap: 12px; }
-.signoff { margin: 18px 0 0; font-family: "Caveat", cursive; font-size: 1.9rem; }
+.signoff { margin: 18px 0 0; font-family: "Caveat", "Noto Color Emoji", cursive; font-size: 1.9rem; }
 
 @media (min-width: 600px) { .card { padding: 34px 30px; } }
 
