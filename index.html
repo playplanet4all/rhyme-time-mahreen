@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Rhyme Time ⭐</title>
+  <meta name="description" content="A little rhyming game for Mahreen." />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=1" />
+</head>
+<body>
+  <div class="bg-float" id="bgFloat" aria-hidden="true"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <!-- ============ 1. INTRO ============ -->
+  <main class="screen" id="introScreen">
+    <div class="card">
+      <p class="eyebrow" id="greeting"></p>
+      <h1 class="title">Rhyme <span class="script">Time!</span></h1>
+      <div class="mascots" aria-hidden="true">🐱 🎩 🐝 🌳</div>
+      <p class="intro__text" id="introText"></p>
+      <button class="btn btn--primary btn--big" id="startBtn" type="button">Let's play! ▶️</button>
+      <p class="small" id="introSmall"></p>
+    </div>
+  </main>
+
+  <!-- ============ 2. PLAY ============ -->
+  <section class="screen" id="playScreen" hidden>
+    <div class="card">
+      <div class="top">
+        <span id="qCount">1 of 10</span>
+        <span class="stars" id="qStars">⭐ 0</span>
+        <button class="icon-btn" id="muteBtn" type="button" aria-pressed="false" aria-label="Sound on">🔊</button>
+      </div>
+      <div class="progress" aria-hidden="true"><span id="qProgress"></span></div>
+      <div class="timer" id="timerWrap" aria-hidden="true"><span id="timerBar"></span><b id="timerNum"></b></div>
+
+      <div class="body" id="qBody">
+        <div class="big-emoji" id="qEmoji">🎵</div>
+        <h2 class="question" id="qText"></h2>
+        <button class="btn btn--ghost btn--small" id="readBtn" type="button">🔊 Read it to me</button>
+        <div class="options" id="qOptions" role="group" aria-label="Answers"></div>
+        <button class="hint-btn" id="hintBtn" type="button">💡 Help me</button>
+        <p class="hint-text" id="hintText" aria-live="polite"></p>
+        <p class="feedback" id="qFeedback" aria-live="polite"></p>
+      </div>
+
+      <button class="btn btn--primary btn--wide" id="nextBtn" type="button" hidden>Next ➡️</button>
+    </div>
+  </section>
+
+  <!-- ============ 3. REWARD ============ -->
+  <section class="screen" id="rewardScreen" hidden>
+    <article class="card">
+      <div class="sticker" id="sticker">🌟</div>
+      <h2 class="reward__title" id="rewardTitle"></h2>
+      <p class="reward__stars" id="rewardStars" aria-label=""></p>
+      <p class="reward__msg" id="rewardMsg"></p>
+      <div class="actions">
+        <a class="btn btn--whatsapp" id="waBtn" target="_blank" rel="noopener" hidden>Send my stars 💬</a>
+        <button class="btn btn--primary" id="againBtn" type="button">Play again 🔁</button>
+        <button class="btn btn--ghost" id="confettiBtn" type="button">More confetti 🎉</button>
+      </div>
+      <p class="signoff" id="signoff"></p>
+    </article>
+  </section>
+
+  <script src="script.js?v=1"></script>
+</body>
+</html>
